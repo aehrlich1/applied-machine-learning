@@ -14,7 +14,7 @@ from sklearn.pipeline import Pipeline
 
 # Define OS independent paths
 working_dir_path = os.path.dirname(__file__)
-car_price_path = os.path.join(working_dir_path, "ressources\\car_price.csv")
+car_price_path = os.path.join(working_dir_path, "ressources/car_price.csv")
 
 # Create the data frames
 data = pd.read_csv(car_price_path, index_col="car_ID")
