@@ -75,7 +75,7 @@ def kernel_methods():
         ('svr', SVR(kernel='rbf'))
     ])
 
-    kernel_svr_model = GridSearchCV(kernel_svr_pipeline, [{
+    kernel_svr_model = GridSearchCV(estimator=kernel_svr_pipeline, param_grid=[{
         'svr__C': [0.001, 0.01, 0.1, 1, 5, 10],
         'svr__epsilon': [0.001, 0.01, 0.1, 0.2, 0.5, 1],
         'svr__gamma': [0.001, 0.01, 0.03, 0.05, 0.1]
